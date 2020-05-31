@@ -11,7 +11,7 @@
 extern "C" {
 #endif
 
-#ifdef CONFIG_ESPHTTPD_USE_ESPFS
+#ifdef CONFIG_ESPFS_PRESENT
 #include "espfs.h"
 #include "httpd.h"
 /**
@@ -29,7 +29,7 @@ CgiStatus ICACHE_FLASH_ATTR cgiEspFsTemplate(HttpdConnData *connData);
  */
 int tplSend(HttpdConnData *conn, const char *str, int len);
 
-#endif // CONFIG_ESPHTTPD_USE_ESPFS
+#endif // CONFIG_ESPFS_PRESENT
 
 #ifdef __cplusplus
 } /* extern "C" */

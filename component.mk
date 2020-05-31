@@ -11,4 +11,8 @@ COMPONENT_SRCDIRS := core util
 COMPONENT_ADD_INCLUDEDIRS := core util include
 COMPONENT_ADD_LDFLAGS := -llibesphttpd
 
+ifeq ("$(CONFIG_ESPFS_PRESENT)","y")
+COMPONENT_DEPENDS := espfs
+endif
+
 CFLAGS += -DFREERTOS
